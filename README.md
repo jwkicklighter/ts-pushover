@@ -13,6 +13,8 @@ Required:
 - `TS_PORT`: port of the virtual server at the TeamSpeak address
 - `CHANNEL_NAME`: name of the channel to monitor
 - `CLIENT_NAME`: your client nickname, so alerts are not sent if you are connected
+- `TS_LOGIN`: username for serverquery
+- `TS_PASS`: password for serverquery
 
 Optional:
 - `MIN_CLIENTS`: the minimum number of clients that must be present in the channel for alerts to be sent
@@ -22,5 +24,5 @@ Optional:
 ### Example usage
 ```
 $ npm install
-$ PUSHOVER_USER='xxxxxxxxxxxxx' PUSHOVER_APP='xxxxxxxxxxx' TS_SERVER='localhost' TS_PORT='10000' CLIENT_NAME='jwkicklighter' CHANNEL_NAME='my cool CHANNEL!' node index.js
+$ PUSHOVER_USER='xxxxxxxxxxxxx' PUSHOVER_APP='xxxxxxxxxxx' TS_SERVER='localhost' TS_PORT='10000' CLIENT_NAME='jwkicklighter' CHANNEL_NAME='my cool CHANNEL!' TS_LOGIN='myquerydude' TS_PASS='somesecretsauce' node index.js
 ```

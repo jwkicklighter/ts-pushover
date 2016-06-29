@@ -29,6 +29,12 @@ var TS_PORT = process.env.TS_PORT;
 // Port used for ServerQuery connections
 var TS_QUERY_PORT = process.env.TS_QUERY_PORT || 10011;
 
+// Username for ServerQuery user
+var TS_LOGIN = process.env.TS_LOGIN;
+
+// Password for ServerQuery user
+var TS_PASS = process.env.TS_PASS;
+
 
 var tsClient = new TeamSpeak(TS_SERVER, TS_QUERY_PORT);
 var clientList = [];
@@ -92,8 +98,8 @@ var registerEvents = function() {
 
 var login = function() {
   tsClient.api.login({
-      client_login_name: "bot2",
-      client_login_password: "sUf1DbQH"
+      client_login_name: TS_LOGIN,
+      client_login_password: TS_PASS
   }, function(err, resp, req) {
       tsClient.api.use({
           port: TS_PORT
@@ -129,6 +135,9 @@ var init = function() {
     process.exit(1);
   } else if (_.isUndefined(CLIENT_NAME)) {
     console.log('CLIENT_NAME environment variable must be present.');
+    process.exit(1);
+  } else if (_.isUndefined(TS_LOGIN) || _.isUndefined(TS_PASS)) {
+    console.log('TS_LOGIN and TS_PASS environment variables must be present.');
     process.exit(1);
   } else {
     login();
