@@ -1,0 +1,16 @@
+{
+  "name": "ts-pushover",
+  "version": "1.0.0",
+  "description": "Sends teamspeak server events to Pushover",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jordan Kicklighter",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.13.1",
+    "node-teamspeak-api": "^1.0.0",
+    "pushover-notifications": "^0.2.3"
+  }
+}
