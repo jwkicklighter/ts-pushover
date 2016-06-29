@@ -1,6 +1,5 @@
 # TS Pushover
-## Sends TeamSpeak events to Pushover
-
+Sends TeamSpeak events to Pushover
 
 ## Usage
 The initial usage of this project is to enable monitoring of a TeamSpeak channel and send alerts to a pushover user when a certain number of clients have connected to that channel.
