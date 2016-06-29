@@ -3,10 +3,10 @@ var _ = require('lodash');
 var push = require('pushover-notifications');
 
 // Channel to monitor
-var CHANNEL_NAME = process.env.CHANNEL_NAME || 'Games';
+var CHANNEL_NAME = process.env.CHANNEL_NAME;
 
 // Do not send notifications if this client is present
-var CLIENT_NAME = process.env.CLIENT_NAME || 'DevCakes';
+var CLIENT_NAME = process.env.CLIENT_NAME;
 
 // Minimum number of clients needed in channel for low priority alert
 var MIN_CLIENTS = process.env.MIN_CLIENTS || 3;
@@ -123,6 +123,12 @@ var init = function() {
     process.exit(1);
   } else if (_.isUndefined(TS_SERVER) || _.isUndefined(TS_PORT)) {
     console.log('TS_SERVER and TS_PORT environment variables must be present.');
+    process.exit(1);
+  } else if (_.isUndefined(CHANNEL_NAME)) {
+    console.log('CHANNEL_NAME environment variable must be present.');
+    process.exit(1);
+  } else if (_.isUndefined(CLIENT_NAME)) {
+    console.log('CLIENT_NAME environment variable must be present.');
     process.exit(1);
   } else {
     login();
