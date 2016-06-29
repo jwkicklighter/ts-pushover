@@ -23,5 +23,5 @@ Optional:
 ### Example usage
 ```
 $ npm install
-$ PUSHOVER_USER='xxxxxxxxxxxxx' PUSHOVER_APP='xxxxxxxxxxx' TS_SERVER='localhost' TS_PORT='10000' node index.js
+$ PUSHOVER_USER='xxxxxxxxxxxxx' PUSHOVER_APP='xxxxxxxxxxx' TS_SERVER='localhost' TS_PORT='10000' CLIENT_NAME='jwkicklighter' CHANNEL_NAME='my cool CHANNEL!' node index.js
 ```
