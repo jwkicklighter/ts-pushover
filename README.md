@@ -20,7 +20,7 @@ Optional:
 - `MIN_CLIENTS_HIGH_PRIORITY`: minimum number of clients for a high priority notification
 - `TS_QUERY_PORT`: port used for ServerQuery to connect, this is usually just the default
 
-Example usage:
+### Example usage
 ```
 $ npm install
 $ PUSHOVER_USER='xxxxxxxxxxxxx' PUSHOVER_APP='xxxxxxxxxxx' TS_SERVER='localhost' TS_PORT='10000' node index.js
